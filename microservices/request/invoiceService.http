@@ -1,0 +1,26 @@
+GET http://localhost:3001/invoice/getAll
+
+###
+GET http://localhost:3001/invoice/getById/617420b0225869e1860b9412
+
+###
+POST http://localhost:3001/invoice/create
+Content-Type: application/json
+
+{
+    "CustomerId":"6170713b52d289aa214f1039",
+    "Detail":[{
+        "ProductId":"6171deb3123842fdc2eecadc",
+        "Count":2,
+        "Price":10.5,
+        "SubTotal":21.0,
+        "Tax":2.1,
+        "Total":23.1
+    }],
+    "SubTotal":21.0,
+    "Tax":2.1,
+    "Total":23.1
+}
+
+###
+DELETE http://localhost:3001/invoice/delete/6171e0f2289b5789800ff9a2

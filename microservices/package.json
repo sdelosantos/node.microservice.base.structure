@@ -1,0 +1,37 @@
+{
+  "name": "microservice-structure-project",
+  "version": "1.0.0",
+  "description": "basic microservice structure demo with nodejs using express, mongodb and docker deploy",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:customers":"tsc -p ./src/microservices/customers/",
+    "service:customers": "nodemon --config ./nodemon.ts.json ./src/microservices/customers/app.ts",
+    "service:invoices": "nodemon --config ./nodemon.ts.json ./src/microservices/invoices/app.ts",
+    "service:products": "nodemon --config ./nodemon.ts.json ./src/microservices/products/app.ts"
+  },
+  "keywords": [
+    "microservice",
+    "nodejs",
+    "express",
+    "structure"
+  ],
+  "author": "saddan de los santos",
+  "license": "ISC",
+  "dependencies": {
+    "@types/body-parser": "^1.19.1",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "body-parse": "^0.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.10"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^16.10.9",
+    "nodemon": "^2.0.13",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  }
+}

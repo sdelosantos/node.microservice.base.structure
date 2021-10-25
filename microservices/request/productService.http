@@ -1,0 +1,12 @@
+GET http://localhost:3002/products/getAll
+
+###
+POST  http://localhost:3002/products/create
+Content-Type: application/json
+
+{
+    "ProductoName":"Producto 1",
+    "SerieNumber":"xxx-xxxx-xxxxx",
+    "Price":10.5,
+    "ExpirationDate":"2023-10-20"
+}

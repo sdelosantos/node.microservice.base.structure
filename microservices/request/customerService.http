@@ -1,0 +1,30 @@
+GET http://localhost:3000/customers/getAll
+###π
+GET http://localhost:3000/customers/getById/6170713b52d289aa214f1039
+###
+POST http://localhost:3000/customers/create 
+content-type: application/json
+
+{
+    "Name":"Saddan",
+    "LastName":"De los santos",
+    "Email":"ssantos@test.com",
+    "Phone":"809-xxx-xxxx",
+    "Address":"[\"Address\",\"Address 2\"]"
+}
+###
+
+PUT http://localhost:3000/customers/update 
+content-type: application/json
+
+{
+    "CustomerId": "6170713b52d289aa214f1039",
+    "Name":"Saddan",
+    "LastName":"Santos",
+    "Email":"ssantos@test.com",
+    "Phone":"809-000-0000",
+    "Address":["My house address","My work address"]
+}
+
+###
+DELETE http://localhost:3000/customers/delete/[here customer id]
